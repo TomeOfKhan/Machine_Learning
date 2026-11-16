@@ -1,0 +1,250 @@
+{
+  "sigma_squared": 0.25,
+  "lambda": 1.0,
+  "dimension": 10,
+  "iterations": 100,
+  "log_joint_constant": -45572.31499787176,
+  "sorted_results": [
+    {
+      "run": 9,
+      "seed": 4728,
+      "log_joint": -136558.60180079183,
+      "objective_without_constant": -90986.28680292008,
+      "test_rmse": 1.1205306367390073
+    },
+    {
+      "run": 10,
+      "seed": 4729,
+      "log_joint": -136567.00018727794,
+      "objective_without_constant": -90994.68518940618,
+      "test_rmse": 1.1053244711244725
+    },
+    {
+      "run": 1,
+      "seed": 4720,
+      "log_joint": -136614.200747087,
+      "objective_without_constant": -91041.88574921522,
+      "test_rmse": 1.127078396643151
+    },
+    {
+      "run": 7,
+      "seed": 4726,
+      "log_joint": -136744.26150644993,
+      "objective_without_constant": -91171.94650857816,
+      "test_rmse": 1.1412029584788814
+    },
+    {
+      "run": 6,
+      "seed": 4725,
+      "log_joint": -136799.60148983548,
+      "objective_without_constant": -91227.28649196372,
+      "test_rmse": 1.111023920897443
+    },
+    {
+      "run": 8,
+      "seed": 4727,
+      "log_joint": -136804.42302899843,
+      "objective_without_constant": -91232.10803112667,
+      "test_rmse": 1.1255094264544763
+    },
+    {
+      "run": 4,
+      "seed": 4723,
+      "log_joint": -136817.75949486447,
+      "objective_without_constant": -91245.4444969927,
+      "test_rmse": 1.1603968517442942
+    },
+    {
+      "run": 2,
+      "seed": 4721,
+      "log_joint": -136825.86019241848,
+      "objective_without_constant": -91253.5451945467,
+      "test_rmse": 1.1141551240057406
+    },
+    {
+      "run": 5,
+      "seed": 4724,
+      "log_joint": -136864.2168355797,
+      "objective_without_constant": -91291.90183770792,
+      "test_rmse": 1.0996258951257227
+    },
+    {
+      "run": 3,
+      "seed": 4722,
+      "log_joint": -136924.2333663412,
+      "objective_without_constant": -91351.91836846946,
+      "test_rmse": 1.1164568648277051
+    }
+  ],
+  "best_run": 9,
+  "neighbors": [
+    {
+      "query": "Star Wars (1977)",
+      "movie_id": 50,
+      "neighbors": [
+        {
+          "movie_id": 172,
+          "title": "Empire Strikes Back, The (1980)",
+          "distance": 0.29684535805028417
+        },
+        {
+          "movie_id": 174,
+          "title": "Raiders of the Lost Ark (1981)",
+          "distance": 0.6104258712761493
+        },
+        {
+          "movie_id": 181,
+          "title": "Return of the Jedi (1983)",
+          "distance": 0.6309490867699742
+        },
+        {
+          "movie_id": 199,
+          "title": "Bridge on the River Kwai, The (1957)",
+          "distance": 0.8438570598398267
+        },
+        {
+          "movie_id": 523,
+          "title": "Cool Hand Luke (1967)",
+          "distance": 0.8496915667422049
+        },
+        {
+          "movie_id": 837,
+          "title": "Meet John Doe (1941)",
+          "distance": 0.8920021617359366
+        },
+        {
+          "movie_id": 186,
+          "title": "Blues Brothers, The (1980)",
+          "distance": 0.8932076029739842
+        },
+        {
+          "movie_id": 228,
+          "title": "Star Trek: The Wrath of Khan (1982)",
+          "distance": 0.9140254235324978
+        },
+        {
+          "movie_id": 166,
+          "title": "Manon of the Spring (Manon des sources) (1986)",
+          "distance": 0.9160099749276215
+        },
+        {
+          "movie_id": 194,
+          "title": "Sting, The (1973)",
+          "distance": 0.9267176411787739
+        }
+      ]
+    },
+    {
+      "query": "My Fair Lady (1964)",
+      "movie_id": 485,
+      "neighbors": [
+        {
+          "movie_id": 486,
+          "title": "Sabrina (1954)",
+          "distance": 0.7070009089778291
+        },
+        {
+          "movie_id": 419,
+          "title": "Mary Poppins (1964)",
+          "distance": 0.7359737357041609
+        },
+        {
+          "movie_id": 143,
+          "title": "Sound of Music, The (1965)",
+          "distance": 0.7589747440297423
+        },
+        {
+          "movie_id": 451,
+          "title": "Grease (1978)",
+          "distance": 0.9268682596062947
+        },
+        {
+          "movie_id": 699,
+          "title": "Little Women (1994)",
+          "distance": 1.0012524168582677
+        },
+        {
+          "movie_id": 418,
+          "title": "Cinderella (1950)",
+          "distance": 1.0104103714100374
+        },
+        {
+          "movie_id": 132,
+          "title": "Wizard of Oz, The (1939)",
+          "distance": 1.015531155260768
+        },
+        {
+          "movie_id": 99,
+          "title": "Snow White and the Seven Dwarfs (1937)",
+          "distance": 1.0181660997540862
+        },
+        {
+          "movie_id": 604,
+          "title": "It Happened One Night (1934)",
+          "distance": 1.035638799819024
+        },
+        {
+          "movie_id": 417,
+          "title": "Parent Trap, The (1961)",
+          "distance": 1.0366314717675804
+        }
+      ]
+    },
+    {
+      "query": "GoodFellas (1990)",
+      "movie_id": 182,
+      "neighbors": [
+        {
+          "movie_id": 187,
+          "title": "Godfather: Part II, The (1974)",
+          "distance": 0.5182903098923125
+        },
+        {
+          "movie_id": 127,
+          "title": "Godfather, The (1972)",
+          "distance": 0.6471469112591041
+        },
+        {
+          "movie_id": 504,
+          "title": "Bonnie and Clyde (1967)",
+          "distance": 0.7408122117517092
+        },
+        {
+          "movie_id": 188,
+          "title": "Full Metal Jacket (1987)",
+          "distance": 0.761290048613493
+        },
+        {
+          "movie_id": 693,
+          "title": "Casino (1995)",
+          "distance": 0.7763912374377897
+        },
+        {
+          "movie_id": 180,
+          "title": "Apocalypse Now (1979)",
+          "distance": 0.8113524611218246
+        },
+        {
+          "movie_id": 135,
+          "title": "2001: A Space Odyssey (1968)",
+          "distance": 0.8294169019063469
+        },
+        {
+          "movie_id": 646,
+          "title": "Once Upon a Time in the West (1969)",
+          "distance": 0.8757231328961999
+        },
+        {
+          "movie_id": 642,
+          "title": "Grifters, The (1990)",
+          "distance": 0.8847473143594541
+        },
+        {
+          "movie_id": 56,
+          "title": "Pulp Fiction (1994)",
+          "distance": 0.8910527247696878
+        }
+      ]
+    }
+  ]
+}

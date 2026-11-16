@@ -1,0 +1,1390 @@
+{
+  "shape": [
+    3012,
+    8447
+  ],
+  "nonzeros": 963063,
+  "rank": 25,
+  "iterations": 100,
+  "seed": 5720,
+  "initialization": "Uniform(1,2)",
+  "first_divergence": 3250068.867967326,
+  "final_divergence": 2611122.5175187197,
+  "topics": [
+    {
+      "topic": 1,
+      "top_words": [
+        {
+          "word": "city",
+          "weight": 0.03607175482971793,
+          "vocabulary_index": 8
+        },
+        {
+          "word": "building",
+          "weight": 0.0220298699268503,
+          "vocabulary_index": 122
+        },
+        {
+          "word": "resident",
+          "weight": 0.01398220545742805,
+          "vocabulary_index": 331
+        },
+        {
+          "word": "build",
+          "weight": 0.013808594789145461,
+          "vocabulary_index": 150
+        },
+        {
+          "word": "area",
+          "weight": 0.013022261960721503,
+          "vocabulary_index": 103
+        },
+        {
+          "word": "street",
+          "weight": 0.012687661471945172,
+          "vocabulary_index": 238
+        },
+        {
+          "word": "house",
+          "weight": 0.010693670222985114,
+          "vocabulary_index": 83
+        },
+        {
+          "word": "neighborhood",
+          "weight": 0.009712626848247094,
+          "vocabulary_index": 445
+        },
+        {
+          "word": "project",
+          "weight": 0.009589883737624084,
+          "vocabulary_index": 201
+        },
+        {
+          "word": "local",
+          "weight": 0.009400127172409007,
+          "vocabulary_index": 180
+        }
+      ]
+    },
+    {
+      "topic": 2,
+      "top_words": [
+        {
+          "word": "percent",
+          "weight": 0.020043643273568952,
+          "vocabulary_index": 2
+        },
+        {
+          "word": "number",
+          "weight": 0.012515681538543218,
+          "vocabulary_index": 65
+        },
+        {
+          "word": "increase",
+          "weight": 0.011652258511413594,
+          "vocabulary_index": 94
+        },
+        {
+          "word": "problem",
+          "weight": 0.011451952197200924,
+          "vocabulary_index": 60
+        },
+        {
+          "word": "result",
+          "weight": 0.010080349714092007,
+          "vocabulary_index": 143
+        },
+        {
+          "word": "study",
+          "weight": 0.010065903819839798,
+          "vocabulary_index": 140
+        },
+        {
+          "word": "level",
+          "weight": 0.008394044280250689,
+          "vocabulary_index": 207
+        },
+        {
+          "word": "report",
+          "weight": 0.007704750764685732,
+          "vocabulary_index": 23
+        },
+        {
+          "word": "rate",
+          "weight": 0.007161680772509095,
+          "vocabulary_index": 98
+        },
+        {
+          "word": "expert",
+          "weight": 0.00712414504979952,
+          "vocabulary_index": 360
+        }
+      ]
+    },
+    {
+      "topic": 3,
+      "top_words": [
+        {
+          "word": "life",
+          "weight": 0.01417450695405228,
+          "vocabulary_index": 22
+        },
+        {
+          "word": "man",
+          "weight": 0.012565117475891398,
+          "vocabulary_index": 7
+        },
+        {
+          "word": "tell",
+          "weight": 0.010593928844013745,
+          "vocabulary_index": 19
+        },
+        {
+          "word": "woman",
+          "weight": 0.009915535752499129,
+          "vocabulary_index": 20
+        },
+        {
+          "word": "thing",
+          "weight": 0.009836307228209041,
+          "vocabulary_index": 32
+        },
+        {
+          "word": "friend",
+          "weight": 0.009714583688698977,
+          "vocabulary_index": 178
+        },
+        {
+          "word": "young",
+          "weight": 0.008202374876671293,
+          "vocabulary_index": 116
+        },
+        {
+          "word": "love",
+          "weight": 0.008199621824499879,
+          "vocabulary_index": 278
+        },
+        {
+          "word": "feel",
+          "weight": 0.008082872066634463,
+          "vocabulary_index": 88
+        },
+        {
+          "word": "family",
+          "weight": 0.007823776904684887,
+          "vocabulary_index": 45
+        }
+      ]
+    },
+    {
+      "topic": 4,
+      "top_words": [
+        {
+          "word": "sell",
+          "weight": 0.01861641663116605,
+          "vocabulary_index": 80
+        },
+        {
+          "word": "store",
+          "weight": 0.016900804688996345,
+          "vocabulary_index": 213
+        },
+        {
+          "word": "buy",
+          "weight": 0.012474754061872255,
+          "vocabulary_index": 113
+        },
+        {
+          "word": "sale",
+          "weight": 0.00935609035096218,
+          "vocabulary_index": 132
+        },
+        {
+          "word": "product",
+          "weight": 0.008859533450414446,
+          "vocabulary_index": 329
+        },
+        {
+          "word": "car",
+          "weight": 0.008121148339496814,
+          "vocabulary_index": 156
+        },
+        {
+          "word": "model",
+          "weight": 0.008101129364430198,
+          "vocabulary_index": 569
+        },
+        {
+          "word": "design",
+          "weight": 0.00795826053169822,
+          "vocabulary_index": 263
+        },
+        {
+          "word": "shop",
+          "weight": 0.0077658610049736254,
+          "vocabulary_index": 733
+        },
+        {
+          "word": "machine",
+          "weight": 0.007324049637327968,
+          "vocabulary_index": 701
+        }
+      ]
+    },
+    {
+      "topic": 5,
+      "top_words": [
+        {
+          "word": "mrs",
+          "weight": 0.04548815693525756,
+          "vocabulary_index": 172
+        },
+        {
+          "word": "father",
+          "weight": 0.03997025542185285,
+          "vocabulary_index": 219
+        },
+        {
+          "word": "president",
+          "weight": 0.03375879333014092,
+          "vocabulary_index": 34
+        },
+        {
+          "word": "son",
+          "weight": 0.033646394535633735,
+          "vocabulary_index": 325
+        },
+        {
+          "word": "graduate",
+          "weight": 0.030745685071817887,
+          "vocabulary_index": 434
+        },
+        {
+          "word": "retire",
+          "weight": 0.028474123780059094,
+          "vocabulary_index": 586
+        },
+        {
+          "word": "daughter",
+          "weight": 0.02684670494356921,
+          "vocabulary_index": 460
+        },
+        {
+          "word": "director",
+          "weight": 0.02238739796378018,
+          "vocabulary_index": 56
+        },
+        {
+          "word": "mother",
+          "weight": 0.02200962004814175,
+          "vocabulary_index": 253
+        },
+        {
+          "word": "vice",
+          "weight": 0.021652615430294217,
+          "vocabulary_index": 392
+        }
+      ]
+    },
+    {
+      "topic": 6,
+      "top_words": [
+        {
+          "word": "meeting",
+          "weight": 0.01080151497806788,
+          "vocabulary_index": 199
+        },
+        {
+          "word": "plan",
+          "weight": 0.009354533578982978,
+          "vocabulary_index": 9
+        },
+        {
+          "word": "deal",
+          "weight": 0.009270717484552746,
+          "vocabulary_index": 105
+        },
+        {
+          "word": "ask",
+          "weight": 0.00899220131671012,
+          "vocabulary_index": 43
+        },
+        {
+          "word": "decision",
+          "weight": 0.008608541958535621,
+          "vocabulary_index": 138
+        },
+        {
+          "word": "interview",
+          "weight": 0.008144175062329213,
+          "vocabulary_index": 260
+        },
+        {
+          "word": "president",
+          "weight": 0.007448325375695448,
+          "vocabulary_index": 34
+        },
+        {
+          "word": "job",
+          "weight": 0.0071688023036200615,
+          "vocabulary_index": 67
+        },
+        {
+          "word": "tell",
+          "weight": 0.007077318352968133,
+          "vocabulary_index": 19
+        },
+        {
+          "word": "meet",
+          "weight": 0.006609917750392383,
+          "vocabulary_index": 137
+        }
+      ]
+    },
+    {
+      "topic": 7,
+      "top_words": [
+        {
+          "word": "food",
+          "weight": 0.014944992854597971,
+          "vocabulary_index": 271
+        },
+        {
+          "word": "restaurant",
+          "weight": 0.010004773681214994,
+          "vocabulary_index": 467
+        },
+        {
+          "word": "serve",
+          "weight": 0.009198486464619364,
+          "vocabulary_index": 145
+        },
+        {
+          "word": "eat",
+          "weight": 0.008446457058834494,
+          "vocabulary_index": 742
+        },
+        {
+          "word": "taste",
+          "weight": 0.007803947599648934,
+          "vocabulary_index": 919
+        },
+        {
+          "word": "dinner",
+          "weight": 0.00769178845500872,
+          "vocabulary_index": 763
+        },
+        {
+          "word": "fresh",
+          "weight": 0.007236480073891121,
+          "vocabulary_index": 877
+        },
+        {
+          "word": "red",
+          "weight": 0.007152535334970081,
+          "vocabulary_index": 600
+        },
+        {
+          "word": "white",
+          "weight": 0.007136028118418095,
+          "vocabulary_index": 209
+        },
+        {
+          "word": "add",
+          "weight": 0.006788443721762452,
+          "vocabulary_index": 42
+        }
+      ]
+    },
+    {
+      "topic": 8,
+      "top_words": [
+        {
+          "word": "police",
+          "weight": 0.03167906447242331,
+          "vocabulary_index": 68
+        },
+        {
+          "word": "charge",
+          "weight": 0.022659937600919607,
+          "vocabulary_index": 89
+        },
+        {
+          "word": "officer",
+          "weight": 0.0168788257844211,
+          "vocabulary_index": 170
+        },
+        {
+          "word": "man",
+          "weight": 0.015126202815101806,
+          "vocabulary_index": 7
+        },
+        {
+          "word": "crime",
+          "weight": 0.014714017710485021,
+          "vocabulary_index": 406
+        },
+        {
+          "word": "arrest",
+          "weight": 0.013868671536753203,
+          "vocabulary_index": 559
+        },
+        {
+          "word": "yesterday",
+          "weight": 0.01032787169464484,
+          "vocabulary_index": 36
+        },
+        {
+          "word": "prosecutor",
+          "weight": 0.010173414294204673,
+          "vocabulary_index": 723
+        },
+        {
+          "word": "criminal",
+          "weight": 0.009849146214613518,
+          "vocabulary_index": 751
+        },
+        {
+          "word": "trial",
+          "weight": 0.009840142134839884,
+          "vocabulary_index": 405
+        }
+      ]
+    },
+    {
+      "topic": 9,
+      "top_words": [
+        {
+          "word": "team",
+          "weight": 0.03786270386522178,
+          "vocabulary_index": 29
+        },
+        {
+          "word": "game",
+          "weight": 0.029902294573406877,
+          "vocabulary_index": 6
+        },
+        {
+          "word": "player",
+          "weight": 0.02641748838573745,
+          "vocabulary_index": 104
+        },
+        {
+          "word": "play",
+          "weight": 0.024164076298734738,
+          "vocabulary_index": 4
+        },
+        {
+          "word": "season",
+          "weight": 0.021080969310495905,
+          "vocabulary_index": 54
+        },
+        {
+          "word": "coach",
+          "weight": 0.015825978461073604,
+          "vocabulary_index": 315
+        },
+        {
+          "word": "football",
+          "weight": 0.008328176937077356,
+          "vocabulary_index": 995
+        },
+        {
+          "word": "pass",
+          "weight": 0.007589246341555093,
+          "vocabulary_index": 186
+        },
+        {
+          "word": "sport",
+          "weight": 0.007333786263000974,
+          "vocabulary_index": 528
+        },
+        {
+          "word": "league",
+          "weight": 0.007316677995708678,
+          "vocabulary_index": 644
+        }
+      ]
+    },
+    {
+      "topic": 10,
+      "top_words": [
+        {
+          "word": "computer",
+          "weight": 0.018321823638692024,
+          "vocabulary_index": 266
+        },
+        {
+          "word": "service",
+          "weight": 0.017689761532741457,
+          "vocabulary_index": 79
+        },
+        {
+          "word": "system",
+          "weight": 0.01633700517143538,
+          "vocabulary_index": 75
+        },
+        {
+          "word": "site",
+          "weight": 0.01529217943781989,
+          "vocabulary_index": 220
+        },
+        {
+          "word": "information",
+          "weight": 0.01514443902472034,
+          "vocabulary_index": 164
+        },
+        {
+          "word": "network",
+          "weight": 0.014322835816084916,
+          "vocabulary_index": 536
+        },
+        {
+          "word": "television",
+          "weight": 0.013372086926147652,
+          "vocabulary_index": 174
+        },
+        {
+          "word": "technology",
+          "weight": 0.01223159158597896,
+          "vocabulary_index": 428
+        },
+        {
+          "word": "program",
+          "weight": 0.012075291454322339,
+          "vocabulary_index": 14
+        },
+        {
+          "word": "internet",
+          "weight": 0.010046596196121976,
+          "vocabulary_index": 866
+        }
+      ]
+    },
+    {
+      "topic": 11,
+      "top_words": [
+        {
+          "word": "art",
+          "weight": 0.015889464011327785,
+          "vocabulary_index": 162
+        },
+        {
+          "word": "artist",
+          "weight": 0.010364548612694079,
+          "vocabulary_index": 333
+        },
+        {
+          "word": "museum",
+          "weight": 0.008721279795683354,
+          "vocabulary_index": 579
+        },
+        {
+          "word": "photograph",
+          "weight": 0.008375043282301226,
+          "vocabulary_index": 818
+        },
+        {
+          "word": "collection",
+          "weight": 0.008301453774868925,
+          "vocabulary_index": 650
+        },
+        {
+          "word": "exhibition",
+          "weight": 0.007557766952166352,
+          "vocabulary_index": 761
+        },
+        {
+          "word": "design",
+          "weight": 0.006491429660947807,
+          "vocabulary_index": 263
+        },
+        {
+          "word": "century",
+          "weight": 0.00643174331256122,
+          "vocabulary_index": 485
+        },
+        {
+          "word": "painting",
+          "weight": 0.006386795809970135,
+          "vocabulary_index": 745
+        },
+        {
+          "word": "paint",
+          "weight": 0.006176164578366438,
+          "vocabulary_index": 978
+        }
+      ]
+    },
+    {
+      "topic": 12,
+      "top_words": [
+        {
+          "word": "pay",
+          "weight": 0.017402831585464944,
+          "vocabulary_index": 40
+        },
+        {
+          "word": "money",
+          "weight": 0.01738443832771443,
+          "vocabulary_index": 50
+        },
+        {
+          "word": "program",
+          "weight": 0.014950504883815887,
+          "vocabulary_index": 14
+        },
+        {
+          "word": "state",
+          "weight": 0.01475699138457337,
+          "vocabulary_index": 3
+        },
+        {
+          "word": "budget",
+          "weight": 0.014352873781918345,
+          "vocabulary_index": 258
+        },
+        {
+          "word": "cost",
+          "weight": 0.014115692003475016,
+          "vocabulary_index": 87
+        },
+        {
+          "word": "tax",
+          "weight": 0.01293005033301231,
+          "vocabulary_index": 135
+        },
+        {
+          "word": "plan",
+          "weight": 0.01184526750935262,
+          "vocabulary_index": 9
+        },
+        {
+          "word": "cut",
+          "weight": 0.011665468745376828,
+          "vocabulary_index": 92
+        },
+        {
+          "word": "bill",
+          "weight": 0.011384715426899485,
+          "vocabulary_index": 183
+        }
+      ]
+    },
+    {
+      "topic": 13,
+      "top_words": [
+        {
+          "word": "school",
+          "weight": 0.0473225392106017,
+          "vocabulary_index": 10
+        },
+        {
+          "word": "student",
+          "weight": 0.0331197803037283,
+          "vocabulary_index": 59
+        },
+        {
+          "word": "child",
+          "weight": 0.02510814749149968,
+          "vocabulary_index": 21
+        },
+        {
+          "word": "program",
+          "weight": 0.015019549715514066,
+          "vocabulary_index": 14
+        },
+        {
+          "word": "education",
+          "weight": 0.014310604597468215,
+          "vocabulary_index": 410
+        },
+        {
+          "word": "class",
+          "weight": 0.013868596293129922,
+          "vocabulary_index": 283
+        },
+        {
+          "word": "college",
+          "weight": 0.01349497309722849,
+          "vocabulary_index": 359
+        },
+        {
+          "word": "family",
+          "weight": 0.012713875606047531,
+          "vocabulary_index": 45
+        },
+        {
+          "word": "parent",
+          "weight": 0.01254241432363263,
+          "vocabulary_index": 295
+        },
+        {
+          "word": "teacher",
+          "weight": 0.012221212052802497,
+          "vocabulary_index": 508
+        }
+      ]
+    },
+    {
+      "topic": 14,
+      "top_words": [
+        {
+          "word": "world",
+          "weight": 0.008031274087225235,
+          "vocabulary_index": 46
+        },
+        {
+          "word": "history",
+          "weight": 0.007128432646227201,
+          "vocabulary_index": 193
+        },
+        {
+          "word": "american",
+          "weight": 0.006758401630393446,
+          "vocabulary_index": 13
+        },
+        {
+          "word": "view",
+          "weight": 0.0058358901394732045,
+          "vocabulary_index": 211
+        },
+        {
+          "word": "power",
+          "weight": 0.005571741443021378,
+          "vocabulary_index": 126
+        },
+        {
+          "word": "great",
+          "weight": 0.005315162811434587,
+          "vocabulary_index": 78
+        },
+        {
+          "word": "question",
+          "weight": 0.0052083839947850265,
+          "vocabulary_index": 81
+        },
+        {
+          "word": "human",
+          "weight": 0.004983446455875919,
+          "vocabulary_index": 424
+        },
+        {
+          "word": "society",
+          "weight": 0.004840254167950623,
+          "vocabulary_index": 748
+        },
+        {
+          "word": "create",
+          "weight": 0.004835279274591041,
+          "vocabulary_index": 129
+        }
+      ]
+    },
+    {
+      "topic": 15,
+      "top_words": [
+        {
+          "word": "vote",
+          "weight": 0.020137755071938032,
+          "vocabulary_index": 151
+        },
+        {
+          "word": "political",
+          "weight": 0.019969016085926498,
+          "vocabulary_index": 76
+        },
+        {
+          "word": "campaign",
+          "weight": 0.019542694121824827,
+          "vocabulary_index": 133
+        },
+        {
+          "word": "election",
+          "weight": 0.014677111070837088,
+          "vocabulary_index": 217
+        },
+        {
+          "word": "party",
+          "weight": 0.014270805794515538,
+          "vocabulary_index": 121
+        },
+        {
+          "word": "republican",
+          "weight": 0.014219198977232249,
+          "vocabulary_index": 254
+        },
+        {
+          "word": "leader",
+          "weight": 0.012479006683567818,
+          "vocabulary_index": 85
+        },
+        {
+          "word": "candidate",
+          "weight": 0.011886085477114389,
+          "vocabulary_index": 320
+        },
+        {
+          "word": "democratic",
+          "weight": 0.01128740577123848,
+          "vocabulary_index": 384
+        },
+        {
+          "word": "state",
+          "weight": 0.011217160823813096,
+          "vocabulary_index": 3
+        }
+      ]
+    },
+    {
+      "topic": 16,
+      "top_words": [
+        {
+          "word": "music",
+          "weight": 0.018598934006078413,
+          "vocabulary_index": 139
+        },
+        {
+          "word": "play",
+          "weight": 0.016197728181958946,
+          "vocabulary_index": 4
+        },
+        {
+          "word": "film",
+          "weight": 0.013847656609685307,
+          "vocabulary_index": 185
+        },
+        {
+          "word": "performance",
+          "weight": 0.011059892530875675,
+          "vocabulary_index": 276
+        },
+        {
+          "word": "audience",
+          "weight": 0.009369139424207973,
+          "vocabulary_index": 516
+        },
+        {
+          "word": "movie",
+          "weight": 0.008759532935761483,
+          "vocabulary_index": 322
+        },
+        {
+          "word": "production",
+          "weight": 0.008568359381432116,
+          "vocabulary_index": 365
+        },
+        {
+          "word": "stage",
+          "weight": 0.008165943797682918,
+          "vocabulary_index": 446
+        },
+        {
+          "word": "theater",
+          "weight": 0.00809431445833865,
+          "vocabulary_index": 524
+        },
+        {
+          "word": "director",
+          "weight": 0.007985702217939473,
+          "vocabulary_index": 56
+        }
+      ]
+    },
+    {
+      "topic": 17,
+      "top_words": [
+        {
+          "word": "mile",
+          "weight": 0.012538696860187035,
+          "vocabulary_index": 356
+        },
+        {
+          "word": "water",
+          "weight": 0.01178717347805257,
+          "vocabulary_index": 234
+        },
+        {
+          "word": "car",
+          "weight": 0.007786686260118894,
+          "vocabulary_index": 156
+        },
+        {
+          "word": "hour",
+          "weight": 0.007438313596625361,
+          "vocabulary_index": 95
+        },
+        {
+          "word": "air",
+          "weight": 0.007433619147240525,
+          "vocabulary_index": 397
+        },
+        {
+          "word": "morning",
+          "weight": 0.007144865622264386,
+          "vocabulary_index": 453
+        },
+        {
+          "word": "road",
+          "weight": 0.006420640318808734,
+          "vocabulary_index": 542
+        },
+        {
+          "word": "fire",
+          "weight": 0.006397815762179196,
+          "vocabulary_index": 269
+        },
+        {
+          "word": "drive",
+          "weight": 0.006366458113466268,
+          "vocabulary_index": 232
+        },
+        {
+          "word": "foot",
+          "weight": 0.006045513469390341,
+          "vocabulary_index": 296
+        }
+      ]
+    },
+    {
+      "topic": 18,
+      "top_words": [
+        {
+          "word": "hit",
+          "weight": 0.023444188371869977,
+          "vocabulary_index": 196
+        },
+        {
+          "word": "club",
+          "weight": 0.02078056899047218,
+          "vocabulary_index": 475
+        },
+        {
+          "word": "baseball",
+          "weight": 0.017745558228502913,
+          "vocabulary_index": 642
+        },
+        {
+          "word": "manager",
+          "weight": 0.01450578782892644,
+          "vocabulary_index": 294
+        },
+        {
+          "word": "game",
+          "weight": 0.014062333291325247,
+          "vocabulary_index": 6
+        },
+        {
+          "word": "pitch",
+          "weight": 0.012764348901203834,
+          "vocabulary_index": 897
+        },
+        {
+          "word": "play",
+          "weight": 0.011904052916581954,
+          "vocabulary_index": 4
+        },
+        {
+          "word": "start",
+          "weight": 0.010975788510148942,
+          "vocabulary_index": 27
+        },
+        {
+          "word": "home",
+          "weight": 0.010209024000706805,
+          "vocabulary_index": 17
+        },
+        {
+          "word": "walk",
+          "weight": 0.009944188711758659,
+          "vocabulary_index": 316
+        }
+      ]
+    },
+    {
+      "topic": 19,
+      "top_words": [
+        {
+          "word": "win",
+          "weight": 0.03124794660992369,
+          "vocabulary_index": 41
+        },
+        {
+          "word": "second",
+          "weight": 0.025225478209486226,
+          "vocabulary_index": 26
+        },
+        {
+          "word": "victory",
+          "weight": 0.016315374920743014,
+          "vocabulary_index": 293
+        },
+        {
+          "word": "score",
+          "weight": 0.01584186615930103,
+          "vocabulary_index": 229
+        },
+        {
+          "word": "third",
+          "weight": 0.015223016122441764,
+          "vocabulary_index": 125
+        },
+        {
+          "word": "final",
+          "weight": 0.013012886346013062,
+          "vocabulary_index": 274
+        },
+        {
+          "word": "point",
+          "weight": 0.012666933149172565,
+          "vocabulary_index": 15
+        },
+        {
+          "word": "finish",
+          "weight": 0.012357698538875255,
+          "vocabulary_index": 417
+        },
+        {
+          "word": "fourth",
+          "weight": 0.011341195105459166,
+          "vocabulary_index": 520
+        },
+        {
+          "word": "lose",
+          "weight": 0.010815610582510224,
+          "vocabulary_index": 91
+        }
+      ]
+    },
+    {
+      "topic": 20,
+      "top_words": [
+        {
+          "word": "death",
+          "weight": 0.02629741541854914,
+          "vocabulary_index": 212
+        },
+        {
+          "word": "die",
+          "weight": 0.02420509100167487,
+          "vocabulary_index": 301
+        },
+        {
+          "word": "kill",
+          "weight": 0.02344860343570697,
+          "vocabulary_index": 259
+        },
+        {
+          "word": "drug",
+          "weight": 0.01591896796578157,
+          "vocabulary_index": 101
+        },
+        {
+          "word": "attack",
+          "weight": 0.015457781254879673,
+          "vocabulary_index": 191
+        },
+        {
+          "word": "hospital",
+          "weight": 0.01400302140495509,
+          "vocabulary_index": 470
+        },
+        {
+          "word": "life",
+          "weight": 0.011697907128117767,
+          "vocabulary_index": 22
+        },
+        {
+          "word": "doctor",
+          "weight": 0.01153014834278867,
+          "vocabulary_index": 353
+        },
+        {
+          "word": "patient",
+          "weight": 0.010714296904118206,
+          "vocabulary_index": 390
+        },
+        {
+          "word": "man",
+          "weight": 0.010014221860008487,
+          "vocabulary_index": 7
+        }
+      ]
+    },
+    {
+      "topic": 21,
+      "top_words": [
+        {
+          "word": "american",
+          "weight": 0.015476101501181247,
+          "vocabulary_index": 13
+        },
+        {
+          "word": "states",
+          "weight": 0.01475625835069461,
+          "vocabulary_index": 12
+        },
+        {
+          "word": "military",
+          "weight": 0.01448640072287786,
+          "vocabulary_index": 189
+        },
+        {
+          "word": "government",
+          "weight": 0.01447889723398669,
+          "vocabulary_index": 16
+        },
+        {
+          "word": "official",
+          "weight": 0.013075723253964094,
+          "vocabulary_index": 5
+        },
+        {
+          "word": "war",
+          "weight": 0.012738899994780898,
+          "vocabulary_index": 154
+        },
+        {
+          "word": "country",
+          "weight": 0.012110339338979644,
+          "vocabulary_index": 25
+        },
+        {
+          "word": "force",
+          "weight": 0.01037216967577721,
+          "vocabulary_index": 64
+        },
+        {
+          "word": "leader",
+          "weight": 0.00938124239431421,
+          "vocabulary_index": 85
+        },
+        {
+          "word": "international",
+          "weight": 0.007615437498658906,
+          "vocabulary_index": 431
+        }
+      ]
+    },
+    {
+      "topic": 22,
+      "top_words": [
+        {
+          "word": "company",
+          "weight": 0.04653291671851709,
+          "vocabulary_index": 1
+        },
+        {
+          "word": "executive",
+          "weight": 0.019648018474746457,
+          "vocabulary_index": 70
+        },
+        {
+          "word": "business",
+          "weight": 0.018204978598549533,
+          "vocabulary_index": 37
+        },
+        {
+          "word": "industry",
+          "weight": 0.01490978882792564,
+          "vocabulary_index": 171
+        },
+        {
+          "word": "sell",
+          "weight": 0.012618596868734008,
+          "vocabulary_index": 80
+        },
+        {
+          "word": "large",
+          "weight": 0.01103029317709527,
+          "vocabulary_index": 30
+        },
+        {
+          "word": "president",
+          "weight": 0.010403442917743056,
+          "vocabulary_index": 34
+        },
+        {
+          "word": "sale",
+          "weight": 0.01003520842538028,
+          "vocabulary_index": 132
+        },
+        {
+          "word": "chief",
+          "weight": 0.009854584969773445,
+          "vocabulary_index": 158
+        },
+        {
+          "word": "deal",
+          "weight": 0.009284506720868868,
+          "vocabulary_index": 105
+        }
+      ]
+    },
+    {
+      "topic": 23,
+      "top_words": [
+        {
+          "word": "editor",
+          "weight": 0.033520892105814194,
+          "vocabulary_index": 291
+        },
+        {
+          "word": "article",
+          "weight": 0.024345974204069053,
+          "vocabulary_index": 486
+        },
+        {
+          "word": "write",
+          "weight": 0.023748774700938145,
+          "vocabulary_index": 71
+        },
+        {
+          "word": "newspaper",
+          "weight": 0.01750278325614073,
+          "vocabulary_index": 533
+        },
+        {
+          "word": "book",
+          "weight": 0.016587493415396646,
+          "vocabulary_index": 102
+        },
+        {
+          "word": "news",
+          "weight": 0.015017503116829355,
+          "vocabulary_index": 146
+        },
+        {
+          "word": "writer",
+          "weight": 0.014433292896036584,
+          "vocabulary_index": 563
+        },
+        {
+          "word": "publish",
+          "weight": 0.014139065930101285,
+          "vocabulary_index": 662
+        },
+        {
+          "word": "page",
+          "weight": 0.013843406727202832,
+          "vocabulary_index": 483
+        },
+        {
+          "word": "medium",
+          "weight": 0.01327748962626016,
+          "vocabulary_index": 512
+        }
+      ]
+    },
+    {
+      "topic": 24,
+      "top_words": [
+        {
+          "word": "case",
+          "weight": 0.017131201319281707,
+          "vocabulary_index": 18
+        },
+        {
+          "word": "law",
+          "weight": 0.014931296517526484,
+          "vocabulary_index": 49
+        },
+        {
+          "word": "court",
+          "weight": 0.012958518858383021,
+          "vocabulary_index": 127
+        },
+        {
+          "word": "lawyer",
+          "weight": 0.01152842408391679,
+          "vocabulary_index": 163
+        },
+        {
+          "word": "official",
+          "weight": 0.010228713323573942,
+          "vocabulary_index": 5
+        },
+        {
+          "word": "legal",
+          "weight": 0.010068820390832059,
+          "vocabulary_index": 478
+        },
+        {
+          "word": "issue",
+          "weight": 0.009754349879666963,
+          "vocabulary_index": 28
+        },
+        {
+          "word": "rule",
+          "weight": 0.009326477496733172,
+          "vocabulary_index": 208
+        },
+        {
+          "word": "judge",
+          "weight": 0.008567358071536095,
+          "vocabulary_index": 314
+        },
+        {
+          "word": "state",
+          "weight": 0.008335900141821463,
+          "vocabulary_index": 3
+        }
+      ]
+    },
+    {
+      "topic": 25,
+      "top_words": [
+        {
+          "word": "percent",
+          "weight": 0.022570785189134992,
+          "vocabulary_index": 2
+        },
+        {
+          "word": "market",
+          "weight": 0.021114198764824052,
+          "vocabulary_index": 35
+        },
+        {
+          "word": "price",
+          "weight": 0.020332122962913455,
+          "vocabulary_index": 48
+        },
+        {
+          "word": "stock",
+          "weight": 0.016474125611613395,
+          "vocabulary_index": 141
+        },
+        {
+          "word": "rise",
+          "weight": 0.012127166067707843,
+          "vocabulary_index": 153
+        },
+        {
+          "word": "rate",
+          "weight": 0.011912175595792995,
+          "vocabulary_index": 98
+        },
+        {
+          "word": "analyst",
+          "weight": 0.011662921134709963,
+          "vocabulary_index": 375
+        },
+        {
+          "word": "bank",
+          "weight": 0.010527191178481846,
+          "vocabulary_index": 236
+        },
+        {
+          "word": "investor",
+          "weight": 0.010180993286982916,
+          "vocabulary_index": 501
+        },
+        {
+          "word": "fall",
+          "weight": 0.010179226095185217,
+          "vocabulary_index": 99
+        }
+      ]
+    }
+  ]
+}

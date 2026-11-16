@@ -1,0 +1,479 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs,caption,pdflscape,array}
+\graphicspath{{figures/}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\captionsetup{font=small,labelfont=bf}
+\begin{document}
+\section*{Problem 1: Probabilistic matrix factorization}
+The supplied training and test sets contain 95,000 and 5,000 centered ratings,
+respectively, for 943 users and 1,682 movies. Set $\sigma^2=0.25$, $d=10$ and
+$\lambda=1$. For each of ten independent runs, initialize every entry of $U$ and
+$V$ from $\mathcal N(0,1)$, using seeds 4720 through 4729. Each of the 100
+iterations first updates all user vectors with $V$ fixed, then all movie vectors
+with the new $U$ fixed, using the exact MAP conditional maximizers.
+Only training observations are used in these updates. Test predictions are the
+unrounded dot products $u_i^Tv_j$, on the original centered scale.
+\subsection*{(a) Log joint likelihood and test RMSE}
+The training objective reported below is the full log joint likelihood,
+\[
+\mathcal L(U,V)=C-\frac1{2\sigma^2}\sum_{(i,j)\in\Omega}(M_{ij}-u_i^Tv_j)^2
+-\frac\lambda2\left(\sum_i\|u_i\|^2+\sum_j\|v_j\|^2\right),
+\]
+\[
+C=-\frac{|\Omega|}{2}\log(2\pi\sigma^2)
++\frac{(N_1+N_2)d}{2}\log\frac\lambda{2\pi}=-45572.31500.
+\]
+Omitting $C$ gives the same maximizers and run ordering. The plot contains only
+iterations 2 through 100, after complete user and movie updates.
+\begin{center}
+\includegraphics[width=0.82\linewidth]{p1a_log_joint.png}
+\captionof{figure}{Training log joint likelihood for all ten PMF runs.}
+\end{center}
+\begin{center}
+\small\setlength{\tabcolsep}{13pt}
+\begin{tabular}{rrr}\toprule
+Run & Final training log joint & Test RMSE\\\midrule
+9 & -136558.60180 & 1.120531 \\
+10 & -136567.00019 & 1.105324 \\
+1 & -136614.20075 & 1.127078 \\
+7 & -136744.26151 & 1.141203 \\
+6 & -136799.60149 & 1.111024 \\
+8 & -136804.42303 & 1.125509 \\
+4 & -136817.75949 & 1.160397 \\
+2 & -136825.86019 & 1.114155 \\
+5 & -136864.21684 & 1.099626 \\
+3 & -136924.23337 & 1.116457 \\
+\bottomrule\end{tabular}
+\end{center}
+Rows are sorted by decreasing objective. RMSE is
+$\sqrt{\frac1{5000}\sum_{(i,j)\in\Omega_{\rm test}}(M_{ij}-u_i^Tv_j)^2}$.
+
+\clearpage
+\subsection*{(b) Ten nearest movies for each query}
+Run 9 has the highest training objective and is used for every list
+below. For query $q$, rank all other movies by $\|v_j-v_q\|_2$, excluding the
+query itself. Selection is based on training objective, not on test RMSE.
+\subsection*{Star Wars (1977)}
+\begin{center}\small\renewcommand{\arraystretch}{0.96}
+\begin{tabular}{r p{0.70\linewidth} r}\toprule
+Rank & Nearest movie & Euclidean distance\\\midrule
+1 & Empire Strikes Back, The (1980) & 0.296845 \\
+2 & Raiders of the Lost Ark (1981) & 0.610426 \\
+3 & Return of the Jedi (1983) & 0.630949 \\
+4 & Bridge on the River Kwai, The (1957) & 0.843857 \\
+5 & Cool Hand Luke (1967) & 0.849692 \\
+6 & Meet John Doe (1941) & 0.892002 \\
+7 & Blues Brothers, The (1980) & 0.893208 \\
+8 & Star Trek: The Wrath of Khan (1982) & 0.914025 \\
+9 & Manon of the Spring (Manon des sources) (1986) & 0.916010 \\
+10 & Sting, The (1973) & 0.926718 \\
+\bottomrule\end{tabular}\end{center}
+\subsection*{My Fair Lady (1964)}
+\begin{center}\small\renewcommand{\arraystretch}{0.96}
+\begin{tabular}{r p{0.70\linewidth} r}\toprule
+Rank & Nearest movie & Euclidean distance\\\midrule
+1 & Sabrina (1954) & 0.707001 \\
+2 & Mary Poppins (1964) & 0.735974 \\
+3 & Sound of Music, The (1965) & 0.758975 \\
+4 & Grease (1978) & 0.926868 \\
+5 & Little Women (1994) & 1.001252 \\
+6 & Cinderella (1950) & 1.010410 \\
+7 & Wizard of Oz, The (1939) & 1.015531 \\
+8 & Snow White and the Seven Dwarfs (1937) & 1.018166 \\
+9 & It Happened One Night (1934) & 1.035639 \\
+10 & Parent Trap, The (1961) & 1.036631 \\
+\bottomrule\end{tabular}\end{center}
+\subsection*{GoodFellas (1990)}
+\begin{center}\small\renewcommand{\arraystretch}{0.96}
+\begin{tabular}{r p{0.70\linewidth} r}\toprule
+Rank & Nearest movie & Euclidean distance\\\midrule
+1 & Godfather: Part II, The (1974) & 0.518290 \\
+2 & Godfather, The (1972) & 0.647147 \\
+3 & Bonnie and Clyde (1967) & 0.740812 \\
+4 & Full Metal Jacket (1987) & 0.761290 \\
+5 & Casino (1995) & 0.776391 \\
+6 & Apocalypse Now (1979) & 0.811352 \\
+7 & 2001: A Space Odyssey (1968) & 0.829417 \\
+8 & Once Upon a Time in the West (1969) & 0.875723 \\
+9 & Grifters, The (1990) & 0.884747 \\
+10 & Pulp Fiction (1994) & 0.891053 \\
+\bottomrule\end{tabular}\end{center}
+
+\clearpage
+\section*{Problem 2: Nonnegative matrix factorization}
+Each line of the news file is one document. For every pair \texttt{idx:cnt}, place
+the count in row \texttt{idx} and the current document's column, with absent
+entries set to zero. Indices in the input start at one. This constructs
+$X\in\mathbb R_+^{3012\times8447}$ with 963,063 nonzero entries.
+\subsection*{(a) Rank-25 divergence minimization}
+Initialize $W\in\mathbb R_+^{3012\times25}$ and
+$H\in\mathbb R_+^{25\times8447}$ independently from Uniform$(1,2)$ using seed
+5720. The minimized divergence is
+\[
+D(X\|WH)=\sum_{i,j}\left[X_{ij}\log\frac{X_{ij}}{(WH)_{ij}}
+-X_{ij}+(WH)_{ij}\right],
+\]
+where $0\log(0/z)=0$. For each iteration, update $H$ first and then $W$:
+\begin{align*}
+R&=X\oslash(WH+\delta),
+&H&\leftarrow H\odot\frac{W^TR}{W^T\mathbf1+\delta},\\
+R&=X\oslash(WH+\delta),
+&W&\leftarrow W\odot\frac{RH^T}{\mathbf1H^T+\delta},
+\end{align*}
+with elementwise multiplication and division, $\delta=10^{-16}$, and broadcast
+denominators. The second ratio uses the updated $H$. The divergence is evaluated
+after each complete pair of updates for all 100 iterations. Zero-count entries
+are included through the full sum of $WH$, computed as
+$\sum_k(\sum_iW_{ik})(\sum_jH_{kj})$.
+\begin{center}
+\includegraphics[width=0.94\linewidth]{p2a_divergence.png}
+\captionof{figure}{Divergence objective over 100 NMF iterations.}
+\end{center}
+The divergence decreases from 3,250,068.868 after the first iteration to
+2,611,122.518 after iteration 100. Lower values indicate a better
+rank-25 approximation under this loss.
+\subsection*{(b) Topic-word weights}
+After iteration 100, normalize each column by
+$\widetilde W_{ik}=W_{ik}/\sum_{r=1}^{3012}W_{rk}$, so every column sums to one.
+The following $5\times5$ table lists the ten largest weights in each of the
+25 columns. Words are matched to the corresponding vocabulary rows. The listed
+weights are entries of the full normalized columns; the top ten are not
+renormalized separately. Compensating row scaling of $H$ preserves $WH$.
+
+\clearpage
+\begin{landscape}
+\section*{Problem 2(b): Top ten words in each of 25 topics}
+\begingroup
+\fontsize{7}{8}\selectfont
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{0.96}
+\begin{center}
+\begin{tabular}{|p{0.19\linewidth}|p{0.19\linewidth}|p{0.19\linewidth}|p{0.19\linewidth}|p{0.19\linewidth}|}\hline
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 1}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+city & 0.03607 \\
+building & 0.02203 \\
+resident & 0.01398 \\
+build & 0.01381 \\
+area & 0.01302 \\
+street & 0.01269 \\
+house & 0.01069 \\
+neighborhood & 0.00971 \\
+project & 0.00959 \\
+local & 0.00940 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 2}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+percent & 0.02004 \\
+number & 0.01252 \\
+increase & 0.01165 \\
+problem & 0.01145 \\
+result & 0.01008 \\
+study & 0.01007 \\
+level & 0.00839 \\
+report & 0.00770 \\
+rate & 0.00716 \\
+expert & 0.00712 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 3}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+life & 0.01417 \\
+man & 0.01257 \\
+tell & 0.01059 \\
+woman & 0.00992 \\
+thing & 0.00984 \\
+friend & 0.00971 \\
+young & 0.00820 \\
+love & 0.00820 \\
+feel & 0.00808 \\
+family & 0.00782 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 4}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+sell & 0.01862 \\
+store & 0.01690 \\
+buy & 0.01247 \\
+sale & 0.00936 \\
+product & 0.00886 \\
+car & 0.00812 \\
+model & 0.00810 \\
+design & 0.00796 \\
+shop & 0.00777 \\
+machine & 0.00732 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 5}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+mrs & 0.04549 \\
+father & 0.03997 \\
+president & 0.03376 \\
+son & 0.03365 \\
+graduate & 0.03075 \\
+retire & 0.02847 \\
+daughter & 0.02685 \\
+director & 0.02239 \\
+mother & 0.02201 \\
+vice & 0.02165 \\
+\end{tabular}\vspace{3pt}\end{minipage}\\\hline
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 6}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+meeting & 0.01080 \\
+plan & 0.00935 \\
+deal & 0.00927 \\
+ask & 0.00899 \\
+decision & 0.00861 \\
+interview & 0.00814 \\
+president & 0.00745 \\
+job & 0.00717 \\
+tell & 0.00708 \\
+meet & 0.00661 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 7}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+food & 0.01494 \\
+restaurant & 0.01000 \\
+serve & 0.00920 \\
+eat & 0.00845 \\
+taste & 0.00780 \\
+dinner & 0.00769 \\
+fresh & 0.00724 \\
+red & 0.00715 \\
+white & 0.00714 \\
+add & 0.00679 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 8}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+police & 0.03168 \\
+charge & 0.02266 \\
+officer & 0.01688 \\
+man & 0.01513 \\
+crime & 0.01471 \\
+arrest & 0.01387 \\
+yesterday & 0.01033 \\
+prosecutor & 0.01017 \\
+criminal & 0.00985 \\
+trial & 0.00984 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 9}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+team & 0.03786 \\
+game & 0.02990 \\
+player & 0.02642 \\
+play & 0.02416 \\
+season & 0.02108 \\
+coach & 0.01583 \\
+football & 0.00833 \\
+pass & 0.00759 \\
+sport & 0.00733 \\
+league & 0.00732 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 10}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+computer & 0.01832 \\
+service & 0.01769 \\
+system & 0.01634 \\
+site & 0.01529 \\
+information & 0.01514 \\
+network & 0.01432 \\
+television & 0.01337 \\
+technology & 0.01223 \\
+program & 0.01208 \\
+internet & 0.01005 \\
+\end{tabular}\vspace{3pt}\end{minipage}\\\hline
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 11}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+art & 0.01589 \\
+artist & 0.01036 \\
+museum & 0.00872 \\
+photograph & 0.00838 \\
+collection & 0.00830 \\
+exhibition & 0.00756 \\
+design & 0.00649 \\
+century & 0.00643 \\
+painting & 0.00639 \\
+paint & 0.00618 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 12}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+pay & 0.01740 \\
+money & 0.01738 \\
+program & 0.01495 \\
+state & 0.01476 \\
+budget & 0.01435 \\
+cost & 0.01412 \\
+tax & 0.01293 \\
+plan & 0.01185 \\
+cut & 0.01167 \\
+bill & 0.01138 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 13}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+school & 0.04732 \\
+student & 0.03312 \\
+child & 0.02511 \\
+program & 0.01502 \\
+education & 0.01431 \\
+class & 0.01387 \\
+college & 0.01349 \\
+family & 0.01271 \\
+parent & 0.01254 \\
+teacher & 0.01222 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 14}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+world & 0.00803 \\
+history & 0.00713 \\
+american & 0.00676 \\
+view & 0.00584 \\
+power & 0.00557 \\
+great & 0.00532 \\
+question & 0.00521 \\
+human & 0.00498 \\
+society & 0.00484 \\
+create & 0.00484 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 15}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+vote & 0.02014 \\
+political & 0.01997 \\
+campaign & 0.01954 \\
+election & 0.01468 \\
+party & 0.01427 \\
+republican & 0.01422 \\
+leader & 0.01248 \\
+candidate & 0.01189 \\
+democratic & 0.01129 \\
+state & 0.01122 \\
+\end{tabular}\vspace{3pt}\end{minipage}\\\hline
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 16}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+music & 0.01860 \\
+play & 0.01620 \\
+film & 0.01385 \\
+performance & 0.01106 \\
+audience & 0.00937 \\
+movie & 0.00876 \\
+production & 0.00857 \\
+stage & 0.00817 \\
+theater & 0.00809 \\
+director & 0.00799 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 17}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+mile & 0.01254 \\
+water & 0.01179 \\
+car & 0.00779 \\
+hour & 0.00744 \\
+air & 0.00743 \\
+morning & 0.00714 \\
+road & 0.00642 \\
+fire & 0.00640 \\
+drive & 0.00637 \\
+foot & 0.00605 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 18}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+hit & 0.02344 \\
+club & 0.02078 \\
+baseball & 0.01775 \\
+manager & 0.01451 \\
+game & 0.01406 \\
+pitch & 0.01276 \\
+play & 0.01190 \\
+start & 0.01098 \\
+home & 0.01021 \\
+walk & 0.00994 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 19}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+win & 0.03125 \\
+second & 0.02523 \\
+victory & 0.01632 \\
+score & 0.01584 \\
+third & 0.01522 \\
+final & 0.01301 \\
+point & 0.01267 \\
+finish & 0.01236 \\
+fourth & 0.01134 \\
+lose & 0.01082 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 20}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+death & 0.02630 \\
+die & 0.02421 \\
+kill & 0.02345 \\
+drug & 0.01592 \\
+attack & 0.01546 \\
+hospital & 0.01400 \\
+life & 0.01170 \\
+doctor & 0.01153 \\
+patient & 0.01071 \\
+man & 0.01001 \\
+\end{tabular}\vspace{3pt}\end{minipage}\\\hline
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 21}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+american & 0.01548 \\
+states & 0.01476 \\
+military & 0.01449 \\
+government & 0.01448 \\
+official & 0.01308 \\
+war & 0.01274 \\
+country & 0.01211 \\
+force & 0.01037 \\
+leader & 0.00938 \\
+international & 0.00762 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 22}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+company & 0.04653 \\
+executive & 0.01965 \\
+business & 0.01820 \\
+industry & 0.01491 \\
+sell & 0.01262 \\
+large & 0.01103 \\
+president & 0.01040 \\
+sale & 0.01004 \\
+chief & 0.00985 \\
+deal & 0.00928 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 23}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+editor & 0.03352 \\
+article & 0.02435 \\
+write & 0.02375 \\
+newspaper & 0.01750 \\
+book & 0.01659 \\
+news & 0.01502 \\
+writer & 0.01443 \\
+publish & 0.01414 \\
+page & 0.01384 \\
+medium & 0.01328 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 24}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+case & 0.01713 \\
+law & 0.01493 \\
+court & 0.01296 \\
+lawyer & 0.01153 \\
+official & 0.01023 \\
+legal & 0.01007 \\
+issue & 0.00975 \\
+rule & 0.00933 \\
+judge & 0.00857 \\
+state & 0.00834 \\
+\end{tabular}\vspace{3pt}\end{minipage}
+ & 
+\begin{minipage}[t]{\linewidth}\centering\textbf{Topic 25}\par\vspace{2pt}\begin{tabular}{@{}lr@{}}
+percent & 0.02257 \\
+market & 0.02111 \\
+price & 0.02033 \\
+stock & 0.01647 \\
+rise & 0.01213 \\
+rate & 0.01191 \\
+analyst & 0.01166 \\
+bank & 0.01053 \\
+investor & 0.01018 \\
+fall & 0.01018 \\
+\end{tabular}\vspace{3pt}\end{minipage}\\\hline
+\end{tabular}
+\end{center}
+\endgroup
+\small Each cell gives the word and its normalized topic weight, in decreasing order.
+\end{landscape}
+\end{document}
